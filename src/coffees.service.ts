@@ -25,7 +25,10 @@ export class CoffeeService {
   update(id: string, updateCoffeeDto: any) {
     const existingCoffee = this.findOne(id);
     if (existingCoffee) {
-      // update operation
+      existingCoffee.id = updateCoffeeDto.id;
+      existingCoffee.brand = updateCoffeeDto.brand;
+      existingCoffee.flavors = updateCoffeeDto.flavors;
+      existingCoffee.name = updateCoffeeDto.name;
     }
   }
 
